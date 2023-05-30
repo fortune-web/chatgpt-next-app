@@ -623,27 +623,27 @@ export function Chat() {
     .concat(
       isLoading
         ? [
-            {
-              ...createMessage({
-                role: "assistant",
-                content: "……",
-              }),
-              preview: true,
-            },
-          ]
+          {
+            ...createMessage({
+              role: "assistant",
+              content: "……",
+            }),
+            preview: true,
+          },
+        ]
         : [],
     )
     .concat(
       userInput.length > 0 && config.sendPreviewBubble
         ? [
-            {
-              ...createMessage({
-                role: "user",
-                content: userInput,
-              }),
-              preview: true,
-            },
-          ]
+          {
+            ...createMessage({
+              role: "user",
+              content: userInput,
+            }),
+            preview: true,
+          },
+        ]
         : [],
     );
 
